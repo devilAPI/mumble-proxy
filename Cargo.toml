@@ -1,0 +1,21 @@
+[package]
+name = "mumble-proxy"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Bridge that makes TS3 users individual Mumble users and Mumble users individual TS3 clients"
+
+[dependencies]
+anyhow = "1"
+bytes = "1.12.1"
+futures = "0.3"
+mumble-protocol-2x = "0.6.0"
+native-tls = "0.2.18"
+rcgen = "0.14.10"
+tokio = { version = "1", features = ["full"] }
+tokio-native-tls = "0.3.1"
+tokio-util = { version = "0.7.20", features = ["codec", "net"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+# crates.io release is from 2021; git master is maintained. Pinned for reproducibility.
+tsclientlib = { git = "https://github.com/ReSpeak/tsclientlib", rev = "ee3bc6f45a7137db7793ba5593a321df400d53e5" }

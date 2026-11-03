@@ -1,0 +1,9 @@
+services:
+  ts3:
+    image: teamspeak:3.13
+    environment:
+      TS3SERVER_LICENSE: accept
+    ports: ["9987:9987/udp", "10011:10011", "30033:30033"]
+  mumble:
+    image: mumblevoip/mumble-server:latest
+    ports: ["64738:64738", "64738:64738/udp"]
